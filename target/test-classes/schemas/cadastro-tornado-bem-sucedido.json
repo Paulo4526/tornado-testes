@@ -1,0 +1,55 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://example.com/object1730382331.json",
+  "title": "Root",
+  "type": "object",
+  "required": [
+    "nome",
+    "classificacao",
+    "local",
+    "data"
+  ],
+  "properties": {
+    "nome": {
+      "$id": "#root/nome",
+      "title": "Nome",
+      "type": "string",
+      "default": "",
+      "examples": [
+        "Catrina"
+      ],
+      "pattern": "^.*$"
+    },
+    "classificacao": {
+      "$id": "#root/classificacao",
+      "title": "Classificacao",
+      "type": "string",
+      "default": "",
+      "examples": [
+        "F5"
+      ],
+      "pattern": "^.*$"
+    },
+    "local": {
+      "$id": "#root/local",
+      "title": "Local",
+      "type": "string",
+      "default": "",
+      "examples": [
+        "Floripa"
+      ],
+      "pattern": "^.*$"
+    },
+    "data": {
+      "$id": "#root/data",
+      "title": "Data",
+      "type": "string",
+      "default": "",
+      "examples": [
+        "2024-10-19"
+      ],
+      "pattern": "^.*$"
+    }
+  }
+}

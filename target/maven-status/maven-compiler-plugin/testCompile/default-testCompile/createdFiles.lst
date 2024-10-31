@@ -1,0 +1,11 @@
+auth\com\usuario\steps\TesteClimaSteps.class
+auth\com\usuario\Model\ErrorMessageModel.class
+auth\com\usuario\services\TesteClimaService.class
+auth\com\usuario\steps\TesteDanosSteps.class
+auth\com\usuario\runner\TestRunner.class
+auth\com\usuario\Model\DanosTestes.class
+auth\com\usuario\Model\ClimaTestes.class
+auth\com\usuario\services\TesteDanosService.class
+auth\com\usuario\Model\Tornadotestes.class
+auth\com\usuario\steps\TesteTornadoSteps.class
+auth\com\usuario\services\TestTornadoService.class

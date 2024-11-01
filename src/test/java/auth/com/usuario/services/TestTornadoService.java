@@ -1,11 +1,26 @@
 package auth.com.usuario.services;
 
 import auth.com.usuario.Model.Tornadotestes;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import io.cucumber.datatable.DataTable;
+import com.networknt.schema.JsonSchema;
+import com.networknt.schema.JsonSchemaFactory;
+import com.networknt.schema.SpecVersion;
+import com.networknt.schema.ValidationMessage;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
+import org.json.JSONException;
+import org.json.JSONObject;
+import org.json.JSONTokener;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.Set;
+
 import static io.restassured.RestAssured.given;
 
 public class TestTornadoService {
@@ -35,6 +50,16 @@ public class TestTornadoService {
                 .response();
     }
 
+    public void configCadastroTornado(String field, String value) {
+        switch (field) {
+            case "id" -> tornado.setId(Long.parseLong(value));
+            case "nome" -> tornado.setNome(value);
+            case "classificacao" -> tornado.setClassificacao(value);
+            case "local" -> tornado.setLocal(value);
+            case "data" -> tornado.setData(value);
+        }
+    }
+
     public void updateTornado(String endPoint){
         String url = baseUrl + endPoint;
         String bodyToSend = gson.toJson(tornado);
@@ -49,16 +74,6 @@ public class TestTornadoService {
                 .response();
     }
 
-
-    public void configCadastroTornado(String field, String value) {
-        switch (field) {
-            case "id" -> tornado.setId(Long.parseLong(value));
-            case "nome" -> tornado.setNome(value);
-            case "classificacao" -> tornado.setClassificacao(value);
-            case "local" -> tornado.setLocal(value);
-            case "data" -> tornado.setData(value);
-        }
-    }
 
     public void deleteTornado (String endPoint){
         String url = String.format("%s%s/%s", baseUrl, endPoint, idTornado);
@@ -85,4 +100,5 @@ public class TestTornadoService {
     public void recuperarID (){
         idTornado = String.valueOf(gson.fromJson(response.jsonPath().prettify(), Tornadotestes.class).getId());
     }
+
 }

@@ -7,7 +7,7 @@ import java.time.LocalDate;
 
 @Data
 public class ClimaTestes {
-    @Expose(serialize = false)
+    @Expose
     private Long id;
     @Expose
     private Long idTornado;

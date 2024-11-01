@@ -5,7 +5,7 @@ import lombok.Data;
 
 @Data
 public class DanosTestes {
-    @Expose(serialize = false)
+    @Expose
     private Long id;
     @Expose
     private Long idTornado;

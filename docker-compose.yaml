@@ -1,0 +1,18 @@
+services:
+  db:
+    container_name: oracle-db
+    image: gvenzl/oracle-xe
+    ports:
+      - "1522:1521"   # Porta padrão do Oracle
+    environment:
+      - ORACLE_PSSWORD=123
+
+  api:
+    build: .
+    ports:
+      - "8080:8080"  # Mudei a porta para não conflitar
+    environment:
+      - PROFILE=dev
+      - DATABASE_URL=jdbc:oracle:thin:@oracle.fiap.com.br:1521:ORCL  # URL do banco de dados
+      - DATABASE_USER=RM98527  # Usuário
+      - DATABASE_PWD=021291  # Senha

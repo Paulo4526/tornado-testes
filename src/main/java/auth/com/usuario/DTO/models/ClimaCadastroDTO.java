@@ -7,7 +7,6 @@ import jakarta.validation.constraints.NotNull;
 import java.time.LocalDate;
 
 public record ClimaCadastroDTO (
-        Long id,
 
         @NotNull(message = "Um id de tornado valido é obrigatório!")
         Long idTornado,

@@ -1,16 +1,21 @@
 package auth.com.usuario.steps;
 
 import auth.com.usuario.services.TestTornadoService;
+import com.networknt.schema.ValidationMessage;
 import io.cucumber.java.pt.Dado;
+import io.cucumber.java.pt.E;
 import io.cucumber.java.pt.Então;
 import io.cucumber.java.pt.Quando;
 import io.cucumber.junit.CucumberOptions;
+import org.json.JSONException;
 import org.junit.Assert;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 @RunWith(Suite.class)
 @CucumberOptions(
@@ -76,14 +81,5 @@ public class TesteTornadoSteps {
     public void queEuInsiraUmIdInvalidoParaExclusão(String idTornado) {
         this.idTornado = idTornado;
     }
-
-
-//    @E("o corpom da reposta de erro da api deve retornar a mensagem {string}")
-//    public void oCorpomDaRepostaDeErroDaApiDeveRetornarAMensagem(String message) {
-//        ErrorMessageModel errorMessageModel = testTornadoService.gson.fromJson(
-//                testTornadoService.response.jsonPath().prettify(), ErrorMessageModel.class);
-//        Assert.assertEquals(message, errorMessageModel.getMessage());
-//    }
-
 
 }

@@ -14,10 +14,11 @@ Funcionalidade: Cadastro de um novo tornado
     Quando eu enviar a requisição para o endpoint "/tornado/cadastrar" de cadastro de tornado
     Então o status code da resposta deve ser 201
 
+
   Cenário: Atualização bem sucedida do tornado
     Dado que eu atualize o nome e a classificacao do tornado:
       | campo          | valor        |
-      | id             | 13           |
+      | id             | 2            |
       | nome           | Murilo       |
       | classificacao  | F4           |
       | local          | Orleans      |

@@ -1,0 +1,53 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://example.com/object1730687272.json",
+  "title": "Root",
+  "type": "object",
+  "required": [
+    "id",
+    "idTornado",
+    "dano",
+    "local"
+  ],
+  "properties": {
+    "id": {
+      "$id": "#root/id",
+      "title": "Id",
+      "type": "integer",
+      "examples": [
+        0
+      ],
+      "default": 0
+    },
+    "idTornado": {
+      "$id": "#root/idTornado",
+      "title": "Idtornado",
+      "type": "integer",
+      "examples": [
+        0
+      ],
+      "default": 0
+    },
+    "dano": {
+      "$id": "#root/dano",
+      "title": "Dano",
+      "type": "string",
+      "default": "",
+      "examples": [
+        "string"
+      ],
+      "pattern": "^.*$"
+    },
+    "local": {
+      "$id": "#root/local",
+      "title": "Local",
+      "type": "string",
+      "default": "",
+      "examples": [
+        "string"
+      ],
+      "pattern": "^.*$"
+    }
+  }
+}

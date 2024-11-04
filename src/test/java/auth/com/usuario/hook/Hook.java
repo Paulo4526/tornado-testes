@@ -1,10 +1,20 @@
 package auth.com.usuario.hook;
 
+import auth.com.usuario.Model.TokenManager;
+import auth.com.usuario.services.TestTornadoService;
 import io.cucumber.java.After;
 import io.cucumber.java.AfterAll;
 import io.cucumber.java.Before;
 import io.cucumber.java.BeforeAll;
+import io.restassured.RestAssured;
+import io.restassured.http.ContentType;
+import io.restassured.response.Response;
+
 public class Hook {
+
+    TokenManager tokenManager = new TokenManager();
+    String baseUrl = "http://localhost:8080";
+
     @BeforeAll
     public static void setUpBeforeClass() {
         // Simulação de configuração global antes da execução de todos os testes
@@ -45,4 +55,5 @@ public class Hook {
         // Simulação de limpeza de dados após o teste
         System.out.println("Dados limpos após o cenário de teste.");
     }
+
 }

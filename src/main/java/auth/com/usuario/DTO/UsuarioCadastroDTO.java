@@ -9,7 +9,6 @@ import java.time.LocalDate;
 
 public record UsuarioCadastroDTO(
 
-        Long id,
         @NotBlank(message = "O Campo nome deve ser preenchido obrigatóriamente!")
         @Size(min = 10, message = "O nome e o sobrenome devem conter no mínimo 10 letras")
         String nome,

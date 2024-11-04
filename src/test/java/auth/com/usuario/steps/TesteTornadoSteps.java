@@ -19,7 +19,7 @@ import java.util.Set;
 
 @RunWith(Suite.class)
 @CucumberOptions(
-        features = {"classpath:festures"},
+        features = {"classpath:features"},
         glue = "auth.com.usuario.steps",
         plugin = {"pretty", "html:target/cucumber-reports"}
 )
@@ -28,7 +28,7 @@ public class TesteTornadoSteps {
     String idTornado;
     TestTornadoService testTornadoService = new TestTornadoService();
 
-    @Dado("que eu tenha os seguintes dados do tornado:")
+    @E("que eu tenha os seguintes dados do tornado:")
     public void queEuTenhaOsSeguintesDadosDoTornado(List<Map<String, String>> rows) {
         for (Map<String, String> columns : rows) {
             testTornadoService.configCadastroTornado(columns.get("campo"), columns.get("valor"));
@@ -62,6 +62,7 @@ public class TesteTornadoSteps {
         Assert.assertEquals(codeStatus, testTornadoService.response.statusCode());
     }
 
+
     @Dado("que eu recupere um ID já criado pelo contexto")
     public void queEuRecupereUmIDJáCriadoPeloContexto() {
         testTornadoService.recuperarID();
@@ -82,4 +83,13 @@ public class TesteTornadoSteps {
         this.idTornado = idTornado;
     }
 
+    @E("que eu recupere um ID já criado pelo contexto ao atualizar")
+    public void queEuRecupereUmIDJáCriadoPeloContextoAoAtualizar() {
+        testTornadoService.recuperarID();
+    }
+
+    @E("que eu recupere um ID já criado pelo contexto ao consultar")
+    public void queEuRecupereUmIDJáCriadoPeloContextoAoConsultar() {
+        testTornadoService.recuperarID();
+    }
 }

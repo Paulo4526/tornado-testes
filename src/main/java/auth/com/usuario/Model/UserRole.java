@@ -1,5 +1,7 @@
 package auth.com.usuario.Model;
 
+import java.util.Arrays;
+
 public enum UserRole {
     ADMIN("admin"),
     USER("user");
@@ -12,5 +14,12 @@ public enum UserRole {
 
     public String getRole() {
         return role;
+    }
+
+    public static UserRole fromRole(String role) {
+        return Arrays.stream(UserRole.values())
+                .filter(r -> r.role.equalsIgnoreCase(role))
+                .findFirst()
+                .orElseThrow(() -> new IllegalArgumentException("Role inválido: " + role));
     }
 }

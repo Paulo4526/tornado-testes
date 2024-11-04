@@ -2,6 +2,7 @@ package auth.com.usuario.steps;
 
 import auth.com.usuario.services.TesteDanosService;
 import io.cucumber.java.pt.Dado;
+import io.cucumber.java.pt.E;
 import io.cucumber.java.pt.Então;
 import io.cucumber.java.pt.Quando;
 import io.cucumber.junit.CucumberOptions;
@@ -14,7 +15,7 @@ import java.util.Map;
 
 @RunWith(Suite.class)
 @CucumberOptions(
-        features = {"classpath:festures"},
+        features = {"classpath:features"},
         glue = "auth.com.usuario.steps",
         plugin = {"pretty", "html:target/cucumber-reports"}
 )
@@ -23,7 +24,7 @@ public class TesteDanosSteps {
     String idDano;
 
     TesteDanosService testeDanosService = new TesteDanosService();
-    @Dado("que eu tenha os seguintes dados do danos:")
+    @E("que eu tenha os seguintes dados do danos:")
     public void queEuTenhaOsSeguintesDadosDoDanos(List<Map<String, String>> rows) {
         for(Map<String, String> columns : rows) {
             testeDanosService.configCadastroDano(columns.get("campo"), columns.get("valor"));

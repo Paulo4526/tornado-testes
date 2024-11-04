@@ -10,6 +10,7 @@ Aplicação em Java Usando ferramentas e conceitos como:
 - Swagger
 - Testes de Comportamento com Cucumber e Junit
 - JSON Schemas
+- Json Validade
 
 ## Pré-requisitos
 
@@ -25,6 +26,8 @@ docker compose up --build
 ```
 
 ## Ierarquia de uso
+- Cadastrar um usuário
+- Resgatar um token para poder realizar os testes e requisições
 - Cadastrar um novo Tornado.
 - Cadastrar informações de Clima com relacionamento ao tornado cadastrado
 - Cadastrar informações de Danos com relacionamento ao tornado cadastrado
@@ -34,8 +37,8 @@ pois, há relacionamentos entre tornado e seus registros de clima e danos causad
 
 ## Documentação online Swagger
 
-link para acessar o swagger: http://localhost:8080/swagger-ui/index.html#/
+link para acessar o swagger com jwt: http://localhost:8080/swagger-ui/index.html#/
 
-![](/.templates/images/swagger.png)
+![](/.templates/images/swagger.png/)
 
 

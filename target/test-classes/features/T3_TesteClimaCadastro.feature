@@ -4,10 +4,16 @@ Funcionalidade: Cadastro de um novo tornado
 Como usuário da API
 Quero cadastrar um novo tornado
 Para que o registro seja salvo corretamente no sistema
-  Contexto: Cadastro bem-sucedido de tornado
-    Dado que eu tenha os seguintes dados do clima:
+  Contexto: Que meu usuario esteja autenticado
+    Dados que eu tenha o email e senha do usuário:
+      | campo          | valor        |
+      | email          | paulobueno@hotmail.com|
+      | senha          | Bueninho1!   |
+    Quando eu enviar a requisição para o endPoint "/auth/usuario/login" para login do usuário
+    Então o status code da resposta do login deve ser 200
+    E que eu tenha os seguintes dados do clima:
     | campo          | valor        |
-    | idTornado      | 1            |
+    | idTornado      | 4            |
     | clima          | chuvoso      |
     | temperatura    | 25           |
     | data           | 2024-08-22   |
@@ -19,7 +25,7 @@ Para que o registro seja salvo corretamente no sistema
     Dado que eu atualize o nome e a classificacao do clima:
     | campo          | valor        |
     | id             | 1            |
-    | idTornado      | 1            |
+    | idTornado      | 4            |
     | clima          | chuvoso      |
     | temperatura    | 25           |
     | data           | 2024-08-22   |

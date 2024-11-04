@@ -1,0 +1,66 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://example.com/object1730687157.json",
+  "title": "Root",
+  "type": "object",
+  "required": [
+    "nome",
+    "email",
+    "senha",
+    "user",
+    "data"
+  ],
+  "properties": {
+    "nome": {
+      "$id": "#root/nome",
+      "title": "Nome",
+      "type": "string",
+      "default": "",
+      "examples": [
+        "stringstri"
+      ],
+      "pattern": "^.*$"
+    },
+    "email": {
+      "$id": "#root/email",
+      "title": "Email",
+      "type": "string",
+      "default": "",
+      "examples": [
+        "string"
+      ],
+      "pattern": "^.*$"
+    },
+    "senha": {
+      "$id": "#root/senha",
+      "title": "Senha",
+      "type": "string",
+      "default": "",
+      "examples": [
+        "stringst"
+      ],
+      "pattern": "^.*$"
+    },
+    "user": {
+      "$id": "#root/user",
+      "title": "User",
+      "type": "string",
+      "default": "",
+      "examples": [
+        "ADMIN"
+      ],
+      "pattern": "^.*$"
+    },
+    "data": {
+      "$id": "#root/data",
+      "title": "Data",
+      "type": "string",
+      "default": "",
+      "examples": [
+        "2024-11-04"
+      ],
+      "pattern": "^.*$"
+    }
+  }
+}

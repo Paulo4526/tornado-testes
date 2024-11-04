@@ -4,20 +4,25 @@ Funcionalidade: Cadastro de um novo dano
   Como usuário da API
   Quero cadastrar um novo dano causado pelo tornado
   Para que o registro seja salvo corretamente no sistema:
-  Contexto: Cadastro bem-sucedido de danos
-    Dado que eu tenha os seguintes dados do danos:
+  Contexto: Que meu usuario esteja autenticado
+    Dados que eu tenha o email e senha do usuário:
       | campo          | valor        |
-      | idTornado      | 1            |
-      | dano           | Deslizamento |
-      | local          | São Paulo    |
+      | email          | paulobueno@hotmail.com|
+      | senha          | Bueninho1!   |
+    Quando eu enviar a requisição para o endPoint "/auth/usuario/login" para login do usuário
+    Então o status code da resposta do login deve ser 200
+    E que eu tenha os seguintes dados do danos:
+    | campo          | valor        |
+    | idTornado      | 1            |
+    | dano           | Deslizamento |
+    | local          | São Paulo    |
     Quando eu enviar a requisição para o endpoint "/dano/cadastrar" de cadastro de danos
     Então o status code da resposta de dano deve ser 201
-
 
   Cenário: Atualização bem sucedida do dano
     Dado que eu atualize o dano  e local:
       | campo          | valor        |
-      | id             | 2            |
+      | id             | 1            |
       | idTornado      | 1            |
       | dano           | desmoronamento |
       | local          | Sao Paulo    |

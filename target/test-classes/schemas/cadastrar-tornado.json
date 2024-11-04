@@ -1,7 +1,7 @@
 {
   "definitions": {},
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://example.com/object1730382331.json",
+  "$id": "https://example.com/object1730686600.json",
   "title": "Root",
   "type": "object",
   "required": [
@@ -17,7 +17,7 @@
       "type": "string",
       "default": "",
       "examples": [
-        "Catrina"
+        "string"
       ],
       "pattern": "^.*$"
     },
@@ -27,7 +27,7 @@
       "type": "string",
       "default": "",
       "examples": [
-        "F5"
+        "string"
       ],
       "pattern": "^.*$"
     },
@@ -37,7 +37,7 @@
       "type": "string",
       "default": "",
       "examples": [
-        "Floripa"
+        "string"
       ],
       "pattern": "^.*$"
     },
@@ -47,7 +47,7 @@
       "type": "string",
       "default": "",
       "examples": [
-        "2024-10-19"
+        "2024-11-04"
       ],
       "pattern": "^.*$"
     }

@@ -2,19 +2,30 @@ package auth.com.usuario.steps;
 
 import auth.com.usuario.services.TesteClimaService;
 import io.cucumber.java.pt.Dado;
+import io.cucumber.java.pt.E;
 import io.cucumber.java.pt.Então;
 import io.cucumber.java.pt.Quando;
+import io.cucumber.junit.CucumberOptions;
 import org.junit.Assert;
+import org.junit.runner.RunWith;
+import org.junit.runners.Suite;
 
 import java.util.List;
 import java.util.Map;
 
-public class TesteCadastroClima {
+
+@RunWith(Suite.class)
+@CucumberOptions(
+        features = {"classpath:features"},
+        glue = "auth.com.usuario.steps",
+        plugin = {"pretty", "html:target/cucumber-reports"}
+)
+public class TesteClimaSteps {
     String idClima;
 
     TesteClimaService testeClimaService = new TesteClimaService();
 
-    @Dado("que eu tenha os seguintes dados do clima:")
+    @E("que eu tenha os seguintes dados do clima:")
     public void queEuTenhaOsSeguintesDadosDoClima(List<Map<String, String>> rows) {
         for(Map<String, String> columns : rows) {
             testeClimaService.configCadastroClima(columns.get("campo"), columns.get("valor"));

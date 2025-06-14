@@ -27,20 +27,19 @@
 <h2>🚀 Como Buildar e Inicializar a Aplicação</h2>
 
 <details>
-  <summary><strong>Passo a Passo:</strong></summary>
-  <ol>
-    <li><strong>Clone o repositório:</strong></li>
-    <pre><code>git clone https://github.com/seu-usuario/seu-repositorio.git</code></pre>
+  <summary><strong>📌 Passo a Passo:</strong></summary>
 
-    <li><strong>Execute o build e suba os containers com Docker Compose:</strong></li>
-    <pre><code>docker compose up --build</code></pre>
+  <p><strong>1️⃣ Clone o repositório:</strong></p>
+  <pre><code>git clone https://github.com/Paulo4526/tornado-testes.git</code></pre>
 
-    <li><strong>Acesse o Swagger para interagir com os endpoints:</strong></li>
-    <p>
-      👉 <a href="http://localhost:8080/swagger-ui/index.html#/" target="_blank">http://localhost:8080/swagger-ui/index.html#/</a>
-    </p>
-  </ol>
+  <p><strong>2️⃣ Execute o build e suba os containers com Docker Compose:</strong></p>
+  <pre><code>docker compose up --build</code></pre>
+
+  <p><strong>3️⃣ Acesse o Swagger para interagir com os endpoints:</strong></p>
+  <p>👉 <a href="http://localhost:8080/swagger-ui/index.html#/" target="_blank">http://localhost:8080/swagger-ui/index.html#/</a></p>
+
 </details>
+
 
 <h2>📋 Hierarquia de Uso da API</h2>
 <ul>

@@ -51,7 +51,7 @@
 </ul>
 
 <p><strong>🔔 Observação Importante:</strong>  
-Todos os cadastros descritos acima deverão ser feitos diretamente via <strong>Swagger</strong>.  
+Todos os cadastros descritos acima deverão ser feitos diretamente via <strong>Swagger</strong>, <strong>Postman</strong> ou algum interpretador de API's.  
 Os endpoints para criação de Tornados, Clima e Danos estão protegidos por autenticação JWT.  
 Certifique-se de obter um token válido antes de realizar estas requisições.</p>
 

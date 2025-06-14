@@ -1,18 +1,19 @@
 <h1>🧪 Projeto BDD com Cucumber</h1>
 
-<p>Aplicação em Java usando ferramentas e conceitos como:</p>
+<p>Aplicação em Java utilizando ferramentas e conceitos modernos para desenvolvimento de APIs robustas e bem testadas:</p>
+
 <ul>
-  <li>Rest e RestFull</li>
-  <li>Migrations</li>
-  <li>Lombok</li>
-  <li>JWT</li>
-  <li>SpringBoot (JPA, Data, Validations, Security...)</li>
-  <li>Docker e Docker Compose</li>
-  <li>Git Actions e Git</li>
-  <li>Swagger</li>
-  <li>Testes de Comportamento com Cucumber e JUnit</li>
-  <li>JSON Schemas</li>
-  <li>Json Validate</li>
+  <li>✅ Rest e RestFull</li>
+  <li>✅ Migrations</li>
+  <li>✅ Lombok</li>
+  <li>✅ JWT</li>
+  <li>✅ Spring Boot (JPA, Data, Validations, Security...)</li>
+  <li>✅ Docker e Docker Compose</li>
+  <li>✅ Git Actions e Git</li>
+  <li>✅ Swagger para documentação e testes dos endpoints</li>
+  <li>✅ Testes de Comportamento com Cucumber e JUnit</li>
+  <li>✅ JSON Schemas</li>
+  <li>✅ JSON Validate</li>
 </ul>
 
 <h2>⚙️ Pré-requisitos</h2>
@@ -23,24 +24,50 @@
   <li>Maven</li>
 </ul>
 
-<h2>🚀 Build da aplicação / Inicialização da aplicação</h2>
-<pre style="background:#f0f0f0; padding:10px; border-radius:6px;">
-<code>docker compose up --build</code>
-</pre>
+<h2>🚀 Como Buildar e Inicializar a Aplicação</h2>
 
-<h2>📋 Hierarquia de uso</h2>
+<details>
+  <summary><strong>Passo a Passo:</strong></summary>
+  <ol>
+    <li><strong>Clone o repositório:</strong></li>
+    <pre><code>git clone https://github.com/seu-usuario/seu-repositorio.git</code></pre>
+
+    <li><strong>Execute o build e suba os containers com Docker Compose:</strong></li>
+    <pre><code>docker compose up --build</code></pre>
+
+    <li><strong>Acesse o Swagger para interagir com os endpoints:</strong></li>
+    <p>
+      👉 <a href="http://localhost:8080/swagger-ui/index.html#/" target="_blank">http://localhost:8080/swagger-ui/index.html#/</a>
+    </p>
+  </ol>
+</details>
+
+<h2>📋 Hierarquia de Uso da API</h2>
 <ul>
-  <li>Cadastrar um usuário</li>
-  <li>Resgatar um token para poder realizar os testes e requisições</li>
-  <li>Cadastrar um novo Tornado</li>
-  <li>Cadastrar informações de Clima com relacionamento ao tornado cadastrado</li>
-  <li>Cadastrar informações de Danos com relacionamento ao tornado cadastrado</li>
+  <li>✅ Cadastrar um usuário</li>
+  <li>✅ Resgatar um token JWT (para autenticação nas requisições seguintes)</li>
+  <li>✅ Cadastrar um novo Tornado</li>
+  <li>✅ Cadastrar informações de Clima (relacionadas ao Tornado)</li>
+  <li>✅ Cadastrar informações de Danos (relacionadas ao Tornado)</li>
 </ul>
 
-<p><strong>OBS:</strong> É necessário criar o cadastro de tornado primeiro. Caso tente criar clima ou danos sem tornado, terá retorno <code>403</code>, pois há relacionamentos entre tornado e seus registros de clima e danos causados.</p>
+<p><strong>🔔 Observação Importante:</strong>  
+Todos os cadastros descritos acima deverão ser feitos diretamente via <strong>Swagger</strong>.  
+Os endpoints para criação de Tornados, Clima e Danos estão protegidos por autenticação JWT.  
+Certifique-se de obter um token válido antes de realizar estas requisições.</p>
 
-<h2>📄 Documentação online Swagger</h2>
-<p>Link para acessar o Swagger com JWT:  
-<a href="http://localhost:8080/swagger-ui/index.html#/" target="_blank">http://localhost:8080/swagger-ui/index.html#/</a></p>
+<p><strong>❗ Atenção:</strong>  
+É necessário <strong>cadastrar o Tornado primeiro</strong>, pois os cadastros de Clima e Danos exigem um Tornado já existente.  
+Caso contrário, a API retornará <code>403 Forbidden</code> devido aos relacionamentos obrigatórios.</p>
+
+<h2>📄 Documentação e Testes via Swagger</h2>
+<p>Todos os endpoints da aplicação podem ser testados diretamente no Swagger UI.</p>
+
+<p><strong>Link Swagger:</strong>  
+👉 <a href="http://localhost:8080/swagger-ui/index.html#/" target="_blank">http://localhost:8080/swagger-ui/index.html#/</a></p>
 
 <p><img src="/.templates/images/swagger.png/" alt="Swagger UI" style="max-width: 100%; border-radius: 8px;"></p>
+
+<h2>✔️ Status do Projeto:</h2>
+<p>✅ Aplicação funcional com BDD e Testes de integração já implementados.<br>
+✅ Melhorias e novas features em andamento.</p>
